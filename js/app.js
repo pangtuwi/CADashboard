@@ -1,8 +1,12 @@
-var app = angular.module('CADashboard', ['ngRoute']);
+angular.module('CADashboard', ['ngRoute'])
 
-app.config(['$routeProvider', function($routeProvider) {
-	$routeProvider.when('/', {
-		templateUrl : 'js/rounds/rounds.html',
-		controller : 'RoundsController'
-	})
-}]);
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+      .when('/rounds', {
+        templateUrl : 'js/rounds/rounds.html',
+        controller : 'RoundsController'
+      })
+      .otherwise({
+        redirectTo: '/rounds'
+      })
+  }]);
