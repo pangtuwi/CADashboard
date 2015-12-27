@@ -1,17 +1,21 @@
-angular.module('CADashboard', ['ngRoute'])
+angular.module('CADashboard', ['ngRoute', 'firebase'])
 
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
 
       .when('/', {
-        templateUrl : 'js/index.html',
+        templateUrl : 'app/index.html',
       })
       .when('/rounds', {
-        templateUrl : 'js/rounds/rounds.html',
+        templateUrl : 'app/rounds/rounds.html',
         controller : 'RoundsController'
       })
+      .when('/users', {
+        templateUrl : 'app/users/users.html',
+        controller : 'UsersController'
+      })
       .when('/about', {
-        templateUrl : 'js/about/about.html',
+        templateUrl : 'app/about/about.html',
         controller : 'AboutController'
       })
 
