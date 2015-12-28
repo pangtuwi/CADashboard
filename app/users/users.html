@@ -2,9 +2,9 @@
 
 <h1>Users</h1>
 
-<ul id="example-messages" class="example-chat-messages">
-  <li ng-repeat="msg in data">
-    <strong class="example-chat-username">{{ msg.id }}</strong>
-    {{ msg.name }}
+<ul id="example-messages" class="list-group">
+  <li class="list-group-item" ng-repeat="msg in data">
+    <strong >{{ msg.name }}</strong> ({{ msg.id }})
+    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
   </li>
 </ul>
