@@ -3,8 +3,8 @@
 <h1>Users</h1>
 
 <ul id="example-messages" class="list-group">
-  <li class="list-group-item" ng-repeat="msg in data">
-    <strong >{{ msg.name }}</strong> ({{ msg.id }})
-    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+  <li class="list-group-item" ng-repeat="user in users">
+    <strong >{{ user.name }}</strong> ({{ user.id }})
+    <a ng-href="#/user/{{ user.id }}"><span class="glyphicon glyphicon-edit glyph-right" aria-hidden="true"></span></a>
   </li>
 </ul>

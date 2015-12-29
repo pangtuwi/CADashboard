@@ -3,6 +3,6 @@ angular.module('CADashboard')
 
     var ref = new Firebase("https://cadevclub.firebaseio.com/users");
   	// download the data into a local object
-  	$scope.data = $firebaseObject(ref);
-
+  	$scope.users = $firebaseObject(ref);
+  	
   }]);

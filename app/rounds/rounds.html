@@ -1,4 +1,12 @@
 
 
 <h1>Rounds</h1>
-{{foo}}
+
+<ul id="list-rounds" class="list-group">
+  <li class="list-group-item" ng-repeat="round in rounds">
+    <strong >{{ round.roundType.name }}</strong> , {{ getFormattedDate(round.createdAt) }} ({{ round.id }})
+    <span class="glyphicon glyphicon-edit glyph-right" aria-hidden="true"></span>
+  </li>
+</ul>
+
+<!--{{foo}}-->

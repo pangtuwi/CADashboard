@@ -14,6 +14,10 @@ angular.module('CADashboard', ['ngRoute', 'firebase'])
         templateUrl : 'app/users/users.html',
         controller : 'UsersController'
       })
+      .when('/user/:userID', {
+        templateUrl : 'app/user/user.html',
+        controller : 'UserController'
+      })
       .when('/about', {
         templateUrl : 'app/about/about.html',
         controller : 'AboutController'

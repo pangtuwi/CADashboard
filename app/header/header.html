@@ -8,15 +8,15 @@
 	      <span class="icon-bar"></span>
 	      <span class="icon-bar"></span>
 	    </button>
-	    <a class="navbar-brand" href="#">CloudArchery Dashboard 0.0.1</a>
+	    <a class="navbar-brand" href="#/">CloudArchery Dashboard 0.0.1</a>
 	  </div>
-	  <div id="navbar" class="collapse navbar-collapse">
+	  <div id="navbar" class="collapse navbar-collapse" ng-controller="HeaderController">
 	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="#">Home</a></li>
-	      <li><a href="#rounds">Rounds</a></li>
-	      <li><a href="#users">Users</a></li>
-	      <li><a href="#about">About</a></li>
-	      <li><a href="#contact">Contact</a></li>
+	      <li ng-class="getClass('/')"><a href="#/">Home</a></li>
+	      <li ng-class="getClass('/rounds')"><a href="#rounds">Rounds</a></li>
+	      <li ng-class="getClass('/users')"><a href="#users">Users</a></li>
+	      <li ng-class="getClass('/about')"><a href="#about">About</a></li>
+	      <li ng-class="getClass('/contact')"><a href="#contact">Contact</a></li>
 	    </ul>
 	  </div><!--/.nav-collapse -->
 	</div>
