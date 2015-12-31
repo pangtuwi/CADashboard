@@ -1,0 +1,15 @@
+
+
+<h1>Leaderboard &nbsp; &nbsp; <small>{{round.roundType.name}} &nbsp; - &nbsp; {{getFormattedDate(round.createdAt)}} &nbsp; - &nbsp; {{round.roundType.description}}</small></h1>
+
+
+
+<ul id="list-round-users" class="list-group">
+	<li class="list-group-item active leaderboard">Name<span class="leaderboard-score">Total</span><span class="leaderboard-values">Avg</span><span class="leaderboard-values">Arws</span></li> 
+  <li class="list-group-item leaderboard" ng-repeat="user in roundUsers | orderBy:'-status.totalScore'">
+    {{ user.name }} 
+    <span class="leaderboard-score"> {{ user.status.totalScore}}</span>
+    <span class="leaderboard-values"> {{ getAverage (user.status.totalScore, user.status.totalArrows)}}</span>
+    <span class="leaderboard-values"> {{ user.status.totalArrows}}</span>
+  </li>
+</ul>

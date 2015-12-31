@@ -2,4 +2,14 @@
 
 <h1>Edit User</h1>
 
-Editing {{user.name}}
+<h2>Editing {{user.name}} </h2>
+
+  <form ng-submit="saveUser()">
+    <label>Name:</label>
+    <input type="text" ng-model="user.name">
+
+    <label>Email:</label>
+    <input type="text" ng-model="user.email">
+
+    <button type="submit">Save Changes</button>
+  </form>

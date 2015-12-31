@@ -10,6 +10,10 @@ angular.module('CADashboard', ['ngRoute', 'firebase'])
         templateUrl : 'app/rounds/rounds.html',
         controller : 'RoundsController'
       })
+      .when('/scores/:roundID', {
+        templateUrl : 'app/scores/scores.html',
+        controller : 'ScoresController'
+      })
       .when('/users', {
         templateUrl : 'app/users/users.html',
         controller : 'UsersController'
@@ -18,6 +22,7 @@ angular.module('CADashboard', ['ngRoute', 'firebase'])
         templateUrl : 'app/user/user.html',
         controller : 'UserController'
       })
+
       .when('/about', {
         templateUrl : 'app/about/about.html',
         controller : 'AboutController'

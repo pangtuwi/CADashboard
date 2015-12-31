@@ -6,3 +6,27 @@ body {
 	padding-right: 10px;
 	float: right;
 }
+
+.id-right {
+	padding-right: 30px;
+	float: right;
+	font-size: 10px;
+}
+
+.leaderboard {
+	font-size: 28px;
+}
+
+.leaderboard-score {
+	font-weight: bold;
+	padding-right: 10px;
+	float : right;
+	text-align: right;
+	width : 80px;
+}
+
+.leaderboard-values {
+	padding-right: 10px;
+	float : right;
+	width: 80px;
+}

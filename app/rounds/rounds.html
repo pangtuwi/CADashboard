@@ -3,9 +3,11 @@
 <h1>Rounds</h1>
 
 <ul id="list-rounds" class="list-group">
-  <li class="list-group-item" ng-repeat="round in rounds">
-    <strong >{{ round.roundType.name }}</strong> , {{ getFormattedDate(round.createdAt) }} ({{ round.id }})
+  <li class="list-group-item" ng-repeat="round in rounds | orderBy:'-createdAt'">
+    <strong >{{ round.roundType.name }}</strong> : &nbsp; {{ getFormattedDate(round.createdAt) }} 
+    <a ng-href="#/scores/{{ round.id }}"><span class="glyphicon glyphicon-th-list glyph-right" aria-hidden="true"></span></a>
     <span class="glyphicon glyphicon-edit glyph-right" aria-hidden="true"></span>
+    <span class="id-right">{{ round.id }}</span>
   </li>
 </ul>
 

@@ -1,10 +1,11 @@
 angular.module('CADashboard')
-  .controller('RoundsController', ['$scope', '$firebaseObject', function ($scope, $firebaseObject) {
+  .controller('RoundsController', ['$scope', '$firebaseArray', function ($scope, $firebaseArray) {
 
    // $scope.foo = 'bar';
    var ref = new Firebase("https://cadevclub.firebaseio.com/rounds");
+   var query = ref.orderByChild("createdAt");
   	// download the data into a local object
-  	$scope.rounds = $firebaseObject(ref);
+  	$scope.rounds = $firebaseArray(query);
 
   	$scope.getFormattedDate = function(unixTimeStamp) {
   		return formattedDateTime(unixTimeStamp);
